@@ -77,6 +77,7 @@ Public value As Variant
 Public unrestricted_value As Variant
 
 Public Sub InitiateProperties(json As Object)
+    On Error Resume Next
     value = json("suggestions")("value")
     unrestricted_value = json("suggestions")("unrestricted_value")
     country = json("suggestions")("data")("country")
